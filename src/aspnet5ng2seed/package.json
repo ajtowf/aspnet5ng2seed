@@ -1,0 +1,14 @@
+{
+	"version": "1.0.0",
+	"name": "ASP.NET",
+  "private": true,
+  "dependencies": {
+    "angular2": "^2.0.0-alpha.47",
+    "es6-shim": "^0.33.13",
+    "systemjs": "^0.19.6"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "rimraf": "^2.4.4"
+  }
+}
