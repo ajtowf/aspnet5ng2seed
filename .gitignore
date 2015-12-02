@@ -1,0 +1,6 @@
+.vs
+*.xproj.user
+node_modules/
+src/aspnet5ng2seed/wwwroot/app/**/*.js
+src/aspnet5ng2seed/wwwroot/app/**/*.js.map
+src/aspnet5ng2seed/wwwroot/lib/
