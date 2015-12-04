@@ -28,12 +28,17 @@ namespace aspnet5ng2seed.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
-            var result = await _signInManager.PasswordSignInAsync(
-                model.Username, model.Password, true, false);
-
-            if (result.Succeeded)
+            if (ModelState.IsValid)
             {
-                return Redirect("/");
+                var result = await _signInManager.PasswordSignInAsync(
+                    model.Username, model.Password, true, false);
+
+                if (result.Succeeded)
+                {
+                    return Redirect("/");
+                }
+
+                ModelState.AddModelError("", "Username or password is incorrect.");
             }
 
             return View();
