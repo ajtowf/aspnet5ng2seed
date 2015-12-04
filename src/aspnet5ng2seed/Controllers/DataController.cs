@@ -9,26 +9,21 @@ using System.Threading.Tasks;
 namespace aspnet5ng2seed.Controllers
 {
     [Route("api/[controller]")]
-    //[Authorize]
+    [Authorize]
     public class DataController : Controller
     {
+        private readonly AppDbContext _context;
+
+        public DataController(AppDbContext context)
+        {
+            _context = context;
+        }
+
         public IEnumerable<Shipment> Get()
         {
-            return new List<Shipment>
-            {
-                new Shipment {
-                    Id = 1,
-                    Origin = "Sweden, Norrköping",
-                    Destination = "Oslo, Norway",
-                    ShippedDate = DateTime.UtcNow.AddDays(-1.4)
-                },
-                new Shipment {
-                    Id = 2,
-                    Origin = "Sweden, Stockholm",
-                    Destination = "Sweden, Gothenburg",
-                    ShippedDate = DateTime.UtcNow
-                }
-            };
+            return _context.Shipments
+                .Where(x => x.Username == User.Identity.Name)
+                .ToList();
         }
     }
 }

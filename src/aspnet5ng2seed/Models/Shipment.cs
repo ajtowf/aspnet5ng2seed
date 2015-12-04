@@ -11,5 +11,6 @@ namespace aspnet5ng2seed.Models
         public string Origin { get; set; }
         public string Destination { get; set; }
         public DateTime ShippedDate { get; set; }
+        public string Username { get; set; }
     }
 }

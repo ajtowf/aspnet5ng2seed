@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using aspnet5ng2seed.Models;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Http;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json.Serialization;
 
@@ -21,16 +23,39 @@ namespace aspnet5ng2seed
                     options.SerializerSettings.ContractResolver =
                     new CamelCasePropertyNamesContractResolver();
                 });
+
+            services.AddEntityFramework()
+                .AddSqlServer()
+                .AddDbContext<AppDbContext>();
+
+            services.AddIdentity<IdentityUser, IdentityRole>(
+                config =>
+                {
+                    config.Cookies.ApplicationCookie.LoginPath = "/Auth/Login";
+                })
+                .AddEntityFrameworkStores<AppDbContext>();
+
+            services.AddTransient<Seeder>();
         }
 
-        public void Configure(IApplicationBuilder app)
+        public void Configure(
+            IApplicationBuilder app,
+            Seeder seeder)
         {
             app.UseIISPlatformHandler();
 
             app.UseDefaultFiles();
             app.UseStaticFiles();
 
-            app.UseMvc();
+            app.UseIdentity();
+            app.UseMvc(config =>
+            {
+                config.MapRoute(
+                    name: "Default",
+                    template: "{controller}/{action}/{id?}");
+            });
+
+            seeder.EnsureSeedData().Wait();
         }
 
         // Entry point for the application.
