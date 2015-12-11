@@ -1,7 +1,9 @@
 # Video tutorial
 
 Setting up seed project: https://youtu.be/Zkesm9CUP_o
+
 Consume data from aspnet5 mvc6 controller: https://youtu.be/Rq63N61C3G4
+
 Upgrade angular2 alpha 47 to 52: https://youtu.be/cbozcSC0L4A
 
 ## Future
