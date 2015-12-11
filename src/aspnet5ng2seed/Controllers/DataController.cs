@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace aspnet5ng2seed.Controllers
 {
     [Route("api/[controller]")]
-    [Authorize]
+    //[Authorize]
     public class DataController : Controller
     {
         private readonly AppDbContext _context;
@@ -22,7 +22,7 @@ namespace aspnet5ng2seed.Controllers
         public IEnumerable<Shipment> Get()
         {
             return _context.Shipments
-                .Where(x => x.Username == User.Identity.Name)
+                //.Where(x => x.Username == User.Identity.Name)
                 .ToList();
         }
     }

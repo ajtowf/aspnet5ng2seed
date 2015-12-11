@@ -6,7 +6,12 @@
     <script src="lib/es6-shim.js"></script>
     <script src="lib/system.js"></script>
     <script>
-        System.config({ defaultJSExtensions: true });
+        System.config({
+            defaultJSExtensions: true,
+            map: {
+             'rxjs': 'lib/rxjs'
+            }
+        });
     </script>
     <script src="lib/angular2.dev.js"></script>
     <script src="lib/http.dev.js"></script>

@@ -1,6 +1,7 @@
 ﻿import { Component, View, bootstrap, NgFor } from 'angular2/angular2';
 import { Http, HTTP_PROVIDERS, Response } from 'angular2/http';
 import { Shipment } from './model';
+import 'rxjs/add/operator/map';
 
 @Component({
     selector: "my-app" 
