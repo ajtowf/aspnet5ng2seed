@@ -4,12 +4,16 @@ Setting up seed project: https://youtu.be/Zkesm9CUP_o
 
 Consume data from aspnet5 mvc6 controller: https://youtu.be/Rq63N61C3G4
 
+Get Started with EntityFramework 7: https://youtu.be/EYsQrEu9Z6c
+
 Upgrade angular2 alpha 47 to 52: https://youtu.be/cbozcSC0L4A
 
+Upgrade angular2 alpha 52 to beta0: https://youtu.be/UZAqWmWUuyI
+
 ## Future
- - Use EntityFramework7
  - Use Aspnet Identity
  - Implement cookie based authentication
+ - Implement validation with aspnet5 taghelpers
 
 # Build
 
