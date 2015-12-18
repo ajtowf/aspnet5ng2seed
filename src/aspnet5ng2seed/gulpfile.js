@@ -11,6 +11,7 @@ var paths = {
 var libs = [
     paths.npm + 'angular2/bundles/angular2.dev.js',
     paths.npm + 'angular2/bundles/http.dev.js',
+    paths.npm + 'angular2/bundles/angular2-polyfills.js',
     paths.npm + 'es6-shim/es6-shim.js',
     paths.npm + 'systemjs/dist/system.js',
     paths.npm + 'systemjs/dist/system-polyfills.js'

@@ -1,4 +1,6 @@
-﻿import { Component, View, bootstrap, NgFor } from 'angular2/angular2';
+﻿import { bootstrap } from 'angular2/platform/browser';
+import { Component, View } from 'angular2/core';
+//import { NgFor } from 'angular2/common';
 import { Http, HTTP_PROVIDERS, Response } from 'angular2/http';
 import { Shipment } from './model';
 import 'rxjs/add/operator/map';
@@ -7,7 +9,7 @@ import 'rxjs/add/operator/map';
     selector: "my-app" 
 })
 @View({
-    directives: [NgFor],
+    //directives: [NgFor],
     templateUrl: 'app/partials/app.html'
 })
 class AppComponent {
