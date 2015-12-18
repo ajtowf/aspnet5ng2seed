@@ -1,14 +1,11 @@
-# Video tutorial
+# Video tutorials
 
-Setting up seed project: https://youtu.be/Zkesm9CUP_o
+ 1. Setting up seed project: https://youtu.be/Zkesm9CUP_o
+ 2. Consume data from aspnet5 mvc6 controller: https://youtu.be/Rq63N61C3G4
+ 3. Get Started with EntityFramework 7: https://youtu.be/EYsQrEu9Z6c
 
-Consume data from aspnet5 mvc6 controller: https://youtu.be/Rq63N61C3G4
-
-Get Started with EntityFramework 7: https://youtu.be/EYsQrEu9Z6c
-
-Upgrade angular2 alpha 47 to 52: https://youtu.be/cbozcSC0L4A
-
-Upgrade angular2 alpha 52 to beta0: https://youtu.be/UZAqWmWUuyI
+ - Upgrade angular2 alpha 47 to 52: https://youtu.be/cbozcSC0L4A
+ - Upgrade angular2 alpha 52 to beta0: https://youtu.be/UZAqWmWUuyI
 
 ## Future
  - Use Aspnet Identity
